@@ -1,16 +1,34 @@
 # Research
 
-## AI Summary
+```yaml
+category:
+  id: custom-research
+  kind: functional-area
+  source_group: custom
+  intended_reader: ai-agent
+  directly_usable: false
+  choose_when:
+    - the task depends on current external information
+    - the answer should be grounded in official or primary sources
+```
 
-- source_group: `custom`
-- area: `research`
-- choose_this_area_when: the task needs current external information instead of only local code context
-
-## Skill Index
-
-### `tech-researcher`
-
-- path: `skills/custom/research/tech-researcher`
-- use_when: 需要查询当前版本文档、API 行为、标准变化、技术选型资料
-- avoid_when: 问题可以直接从本地仓库或已有上下文回答
-- ready: yes
+```yaml
+skills:
+  - id: tech-researcher
+    path: skills/custom/research/tech-researcher
+    summary: Research current APIs, libraries, standards, and official guidance.
+    use_when:
+      - the task depends on current documentation
+      - the task depends on version-specific behavior
+      - the answer should cite primary sources
+    avoid_when:
+      - the answer is already available from local code or stable prior context
+    inputs:
+      - target technology
+      - specific research question
+    outputs:
+      - sourced answer
+      - current guidance summary
+      - decision-relevant references
+    ready: yes
+```

@@ -1,30 +1,69 @@
 # Engineering
 
-## AI Summary
+```yaml
+category:
+  id: custom-engineering
+  kind: functional-area
+  source_group: custom
+  intended_reader: ai-agent
+  directly_usable: false
+  choose_when:
+    - the task is about understanding code
+    - the task is about implementing code
+    - the task is about reviewing code
+```
 
-- source_group: `custom`
-- area: `engineering`
-- choose_this_area_when: the task is about reading code, changing code, or reviewing code
-
-## Skill Index
-
-### `codebase-reader`
-
-- path: `skills/custom/engineering/codebase-reader`
-- use_when: 需要理解陌生项目、入口、模块关系、控制流、调用链
-- avoid_when: 目标改动点已经明确，且主要任务是直接实现
-- ready: yes
-
-### `code-implementer`
-
-- path: `skills/custom/engineering/code-implementer`
-- use_when: 需要编写代码、修复 bug、补测试、做最小必要验证
-- avoid_when: 任务重点是先理解架构或先做风险评审
-- ready: yes
-
-### `code-reviewer`
-
-- path: `skills/custom/engineering/code-reviewer`
-- use_when: 需要评审 diff、找 bug、找回归风险、安全问题和测试缺口
-- avoid_when: 还没有成型改动可评审，或者目标是直接写代码
-- ready: yes
+```yaml
+skills:
+  - id: codebase-reader
+    path: skills/custom/engineering/codebase-reader
+    summary: Understand an unfamiliar repository before making changes.
+    use_when:
+      - repository structure is unclear
+      - execution flow must be mapped first
+      - architecture explanation is required
+    avoid_when:
+      - direct implementation can start immediately
+    inputs:
+      - repository path
+      - specific area or question if available
+    outputs:
+      - entrypoint map
+      - module relationships
+      - execution-flow summary
+    ready: yes
+  - id: code-implementer
+    path: skills/custom/engineering/code-implementer
+    summary: Make code changes and validate them with the smallest useful checks.
+    use_when:
+      - a feature must be added
+      - a bug must be fixed
+      - tests or verification must be updated
+    avoid_when:
+      - the repository is still poorly understood
+      - the main task is review instead of implementation
+    inputs:
+      - target repository
+      - user goal or bug description
+    outputs:
+      - code changes
+      - minimal verification
+      - concise implementation summary
+    ready: yes
+  - id: code-reviewer
+    path: skills/custom/engineering/code-reviewer
+    summary: Review a change set for correctness, regressions, and missing coverage.
+    use_when:
+      - a patch, diff, or PR needs review
+      - the user asks for risk assessment
+    avoid_when:
+      - there is no concrete change set to inspect
+      - the task is direct implementation
+    inputs:
+      - diff, patch, commit, or changed files
+    outputs:
+      - prioritized findings
+      - open questions
+      - residual risks
+    ready: yes
+```

@@ -1,23 +1,51 @@
 # Content
 
-## AI Summary
+```yaml
+category:
+  id: external-content
+  kind: functional-area
+  source_group: external
+  intended_reader: ai-agent
+  directly_usable: false
+  choose_when:
+    - the task targets .docx fidelity
+    - the task targets raster image generation or editing
+```
 
-- source_group: `external`
-- area: `content`
-- choose_this_area_when: the task is about document fidelity or bitmap image generation/editing
-
-## Skill Index
-
-### `doc`
-
-- path: `skills/external/content/doc`
-- use_when: 需要处理 `.docx`、版式、内容替换、格式保真、渲染校验
-- avoid_when: 文档只是普通文本或 Markdown，不涉及 Word 格式
-- ready: yes
-
-### `imagegen`
-
-- path: `skills/external/content/imagegen`
-- use_when: 需要生成或编辑位图图片、插图、贴图、透明背景图、视觉草稿
-- avoid_when: 更适合直接修改 SVG、HTML/CSS、Canvas 或代码生成图形
-- ready: yes
+```yaml
+skills:
+  - id: doc
+    path: skills/external/content/doc
+    summary: Work with .docx files while preserving layout and formatting fidelity.
+    use_when:
+      - the input is a .docx document
+      - rendering fidelity matters
+      - formatting must be inspected or preserved
+    avoid_when:
+      - the task is plain text only
+      - Markdown is sufficient
+    inputs:
+      - .docx file
+      - target edits or formatting requirements
+    outputs:
+      - updated .docx content
+      - rendering checks
+      - layout-preserving edits
+    ready: yes
+  - id: imagegen
+    path: skills/external/content/imagegen
+    summary: Generate or edit raster images such as illustrations, sprites, and mockups.
+    use_when:
+      - the output should be a bitmap asset
+      - the task needs image generation or transformation
+    avoid_when:
+      - SVG or code-native rendering is a better fit
+    inputs:
+      - visual intent
+      - reference image or prompt if available
+    outputs:
+      - image asset
+      - image variants
+      - transformed bitmap content
+    ready: yes
+```

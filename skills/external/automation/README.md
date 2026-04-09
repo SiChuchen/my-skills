@@ -1,23 +1,50 @@
 # Automation
 
-## AI Summary
+```yaml
+category:
+  id: external-automation
+  kind: functional-area
+  source_group: external
+  intended_reader: ai-agent
+  directly_usable: false
+  choose_when:
+    - the task requires execution in a browser
+    - the task requires CI diagnosis instead of only local reasoning
+```
 
-- source_group: `external`
-- area: `automation`
-- choose_this_area_when: the task needs a tool to execute flows instead of only reasoning about them
-
-## Skill Index
-
-### `gh-fix-ci`
-
-- path: `skills/external/automation/gh-fix-ci`
-- use_when: 需要检查 GitHub PR checks、GitHub Actions、失败日志和失败步骤
-- avoid_when: CI 不在 GitHub，或者任务只需要本地修代码不需要查线上执行结果
-- ready: yes
-
-### `playwright`
-
-- path: `skills/external/automation/playwright`
-- use_when: 需要真实浏览器操作、页面验证、截图、表单填写、UI 流程调试
-- avoid_when: 不需要浏览器交互，或者任务是纯后端/纯文本
-- ready: yes
+```yaml
+skills:
+  - id: gh-fix-ci
+    path: skills/external/automation/gh-fix-ci
+    summary: Investigate failing GitHub PR checks and GitHub Actions runs.
+    use_when:
+      - CI failures are GitHub-based
+      - remote logs or check states must be inspected
+    avoid_when:
+      - the CI system is not GitHub-based
+      - only local code changes are needed
+    inputs:
+      - repository or PR context
+      - failing check or workflow reference
+    outputs:
+      - failure summary
+      - likely root cause
+      - fix direction
+    ready: yes
+  - id: playwright
+    path: skills/external/automation/playwright
+    summary: Automate a real browser for UI verification and interaction.
+    use_when:
+      - a real browser session is required
+      - the task needs screenshots, form interaction, or UI flow validation
+    avoid_when:
+      - the task is backend-only
+      - browser execution is unnecessary
+    inputs:
+      - target URL or UI flow
+    outputs:
+      - browser observations
+      - screenshots or snapshots
+      - verified UI behavior
+    ready: yes
+```

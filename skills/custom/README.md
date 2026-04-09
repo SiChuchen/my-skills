@@ -1,15 +1,19 @@
 # Custom
 
-## AI Summary
-
-- source_group: `custom`
-- meaning: maintained and tuned in this repository
-- choose_this_group_when: you want a self-owned skill or expect future customization
-- subareas:
-  - `engineering`
-  - `research`
-
-## Routing Hint
-
-- Go to `engineering/` for code understanding, implementation, or review
-- Go to `research/` for external technical research and current-document lookup
+```yaml
+category:
+  id: custom
+  kind: source-group
+  intended_reader: ai-agent
+  directly_usable: false
+  meaning: skills maintained and tuned in this repository
+  choose_when:
+    - you prefer repository-owned skills
+    - you expect future customization or frequent local updates
+  child_groups:
+    - engineering
+    - research
+  next_step:
+    - choose engineering for repository reading, implementation, or review
+    - choose research for current external technical lookup
+```
