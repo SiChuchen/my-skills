@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tech Researcher"
+  short_description: "Research APIs, libraries, and behavior from sources"
+  default_prompt: "Use $tech-researcher to look up the current official guidance for this library or API and summarize the answer with sources."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codebase Reader"
+  short_description: "Read unfamiliar repos and map architecture fast"
+  default_prompt: "Use $codebase-reader to understand this repository, map the main modules, and explain the execution flow."

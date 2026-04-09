@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Implementer"
+  short_description: "Implement changes safely and verify them"
+  default_prompt: "Use $code-implementer to make this code change, follow repo conventions, and validate the result."
