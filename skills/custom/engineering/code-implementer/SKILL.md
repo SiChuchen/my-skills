@@ -1,6 +1,38 @@
 ---
 name: "code-implementer"
 description: "Use when the task requires changing code, fixing bugs, refactoring, adding tests, or implementing features while following repository conventions, minimizing risk, and validating the result."
+metadata:
+  id: code-implementer
+  source_group: custom
+  functional_area: engineering
+  tags:
+    - code
+    - implementation
+    - bugfix
+    - refactor
+    - testing
+  best_for:
+    - feature work
+    - bug fixes
+    - targeted refactors
+    - updating tests and validation
+  avoid_for:
+    - repository discovery
+    - diff-only review
+  requires_tools:
+    - shell
+    - filesystem
+    - file-editing
+  optional_tools:
+    - git
+    - test-runner
+    - typechecker
+    - linter
+  requires_network: false
+  requires_auth: none
+  outputs:
+    - code changes
+    - validation summary
 ---
 
 # Code Implementer

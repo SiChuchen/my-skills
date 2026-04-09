@@ -1,6 +1,37 @@
 ---
 name: "code-reviewer"
 description: "Use when the task is a code review, patch review, diff review, or risk assessment and the answer should prioritize concrete bugs, regressions, missing tests, security issues, and unclear assumptions."
+metadata:
+  id: code-reviewer
+  source_group: custom
+  functional_area: engineering
+  tags:
+    - review
+    - diff
+    - regressions
+    - risk
+    - testing
+  best_for:
+    - patch review
+    - pull request review
+    - regression detection
+    - missing test identification
+  avoid_for:
+    - repository discovery
+    - direct implementation work
+  requires_tools:
+    - filesystem
+    - file-reading
+    - diff-access
+  optional_tools:
+    - git
+    - test-results
+  requires_network: false
+  requires_auth: none
+  outputs:
+    - prioritized findings
+    - review summary
+    - residual risk notes
 ---
 
 # Code Reviewer

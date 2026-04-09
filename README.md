@@ -5,6 +5,7 @@ catalog:
   kind: skill-library
   intended_reader: ai-agent
   primary_goal: route a task to the most relevant reusable skill
+  contribution_contract: AGENTS.md
   usable_unit: leaf directory containing SKILL.md
   non_usable_units:
     - repository root
@@ -28,6 +29,36 @@ directory_map:
   - skills/external/content
   - skills/external/development
   - skills/external/platform
+```
+
+```yaml
+leaf_skill_metadata:
+  location: front matter at the top of each leaf SKILL.md
+  parse_order:
+    - metadata.id
+    - metadata.source_group
+    - metadata.functional_area
+    - metadata.tags
+    - metadata.best_for
+    - metadata.avoid_for
+    - metadata.requires_tools
+    - metadata.optional_tools
+    - metadata.requires_network
+    - metadata.requires_auth
+    - metadata.outputs
+  usage_rule:
+    - parse front matter first for routing and feasibility
+    - read the rest of SKILL.md only after the skill is selected
+  field_notes:
+    requires_network:
+      - false
+      - true
+      - task-dependent
+    requires_auth:
+      - none
+      - github-cli
+      - task-dependent
+      - OPENAI_API_KEY-if-cli-fallback
 ```
 
 ```yaml

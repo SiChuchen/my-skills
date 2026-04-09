@@ -1,6 +1,38 @@
 ---
 name: "codebase-reader"
 description: "Use when the task requires understanding an unfamiliar repository, locating entrypoints, tracing control or data flow, mapping architecture, or explaining how modules fit together before making changes."
+metadata:
+  id: codebase-reader
+  source_group: custom
+  functional_area: engineering
+  tags:
+    - repository
+    - architecture
+    - tracing
+    - onboarding
+    - analysis
+  best_for:
+    - unfamiliar repositories
+    - entrypoint tracing
+    - architecture mapping
+    - execution-flow explanation
+  avoid_for:
+    - direct feature implementation when the target is already clear
+    - patch-only review
+  requires_tools:
+    - filesystem
+    - file-reading
+    - code-search
+    - shell
+  optional_tools:
+    - git
+    - test-files
+  requires_network: false
+  requires_auth: none
+  outputs:
+    - repository map
+    - execution-flow summary
+    - concrete file references
 ---
 
 # Codebase Reader

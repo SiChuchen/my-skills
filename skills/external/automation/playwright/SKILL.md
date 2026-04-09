@@ -1,6 +1,37 @@
 ---
 name: "playwright"
 description: "Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` or the bundled wrapper script."
+metadata:
+  id: playwright
+  source_group: external
+  functional_area: automation
+  tags:
+    - browser
+    - ui
+    - screenshots
+    - automation
+    - debugging
+  best_for:
+    - real browser interaction
+    - page verification
+    - UI flow debugging
+    - screenshot capture
+  avoid_for:
+    - backend-only tasks
+    - tasks that do not need browser execution
+  requires_tools:
+    - npx
+    - browser-automation
+    - shell
+  optional_tools:
+    - playwright-cli
+    - node
+  requires_network: task-dependent
+  requires_auth: task-dependent
+  outputs:
+    - browser observations
+    - screenshots
+    - UI behavior verification
 ---
 
 

@@ -1,6 +1,35 @@
 ---
 name: "tech-researcher"
 description: "Use when the task requires current technical information from official documentation or primary sources, including library behavior, API changes, version-specific guidance, product comparisons, standards, and external references."
+metadata:
+  id: tech-researcher
+  source_group: custom
+  functional_area: research
+  tags:
+    - research
+    - documentation
+    - current-info
+    - versions
+    - primary-sources
+  best_for:
+    - current API guidance
+    - version-specific behavior
+    - standards and release-note lookup
+    - product comparison from official sources
+  avoid_for:
+    - questions answerable from local repository context alone
+  requires_tools:
+    - web-search
+  optional_tools:
+    - context7
+    - deepwiki
+    - official-doc-sites
+  requires_network: true
+  requires_auth: none
+  outputs:
+    - sourced answer
+    - official references
+    - version-aware recommendation
 ---
 
 # Tech Researcher

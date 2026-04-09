@@ -1,6 +1,34 @@
 ---
 name: "openai-docs"
 description: "Use when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations, help choosing the latest model for a use case, or explicit GPT-5.4 upgrade and prompt-upgrade guidance; prioritize OpenAI docs MCP tools, use bundled references only as helper context, and restrict any fallback browsing to official OpenAI domains."
+metadata:
+  id: openai-docs
+  source_group: external
+  functional_area: platform
+  tags:
+    - openai
+    - docs
+    - api
+    - models
+    - official-sources
+  best_for:
+    - OpenAI API questions
+    - model selection guidance
+    - upgrade and migration guidance
+  avoid_for:
+    - non-OpenAI questions
+  requires_tools:
+    - openai-developer-docs-mcp
+    - network
+  optional_tools:
+    - web-search
+    - local-reference-files
+  requires_network: true
+  requires_auth: none
+  outputs:
+    - doc-grounded answer
+    - official citations
+    - current OpenAI guidance
 ---
 
 

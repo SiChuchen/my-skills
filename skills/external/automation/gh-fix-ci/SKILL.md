@@ -1,6 +1,36 @@
 ---
 name: "gh-fix-ci"
 description: "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL."
+metadata:
+  id: gh-fix-ci
+  source_group: external
+  functional_area: automation
+  tags:
+    - github
+    - ci
+    - actions
+    - logs
+    - diagnostics
+  best_for:
+    - failing GitHub Actions runs
+    - broken pull request checks
+    - remote CI log inspection
+  avoid_for:
+    - non-GitHub CI systems
+    - local-only debugging with no remote CI context
+  requires_tools:
+    - gh
+    - shell
+    - network
+  optional_tools:
+    - python3
+    - git
+  requires_network: true
+  requires_auth: github-cli
+  outputs:
+    - failing-check summary
+    - root-cause clues
+    - fix plan
 ---
 
 

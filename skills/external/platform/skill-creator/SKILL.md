@@ -2,7 +2,34 @@
 name: skill-creator
 description: Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations.
 metadata:
+  id: skill-creator
+  source_group: external
+  functional_area: platform
   short-description: Create or update a skill
+  tags:
+    - skill
+    - scaffold
+    - metadata
+    - workflow
+    - authoring
+  best_for:
+    - new skill creation
+    - skill structure initialization
+    - updating skill metadata and guidance
+  avoid_for:
+    - ordinary repository work unrelated to skills
+    - tiny edits that do not need skill design guidance
+  requires_tools:
+    - filesystem
+    - file-editing
+  optional_tools:
+    - python3
+  requires_network: false
+  requires_auth: none
+  outputs:
+    - skill scaffold
+    - skill metadata
+    - authoring guidance
 ---
 
 # Skill Creator

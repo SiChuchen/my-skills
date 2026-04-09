@@ -1,6 +1,37 @@
 ---
 name: frontend-skill
 description: Use when the task asks for a visually strong landing page, website, app, prototype, demo, or game UI. This skill enforces restrained composition, image-led hierarchy, cohesive content structure, and tasteful motion while avoiding generic cards, weak branding, and UI clutter.
+metadata:
+  id: frontend-skill
+  source_group: external
+  functional_area: development
+  tags:
+    - frontend
+    - ui
+    - layout
+    - styling
+    - motion
+  best_for:
+    - landing pages
+    - app UI
+    - prototypes
+    - interaction-heavy visual work
+  avoid_for:
+    - backend-only work
+    - trivial non-design edits
+  requires_tools:
+    - filesystem
+    - file-editing
+    - shell
+  optional_tools:
+    - browser-preview
+    - screenshot-tools
+  requires_network: false
+  requires_auth: none
+  outputs:
+    - UI implementation
+    - visual direction
+    - interaction refinements
 ---
 
 # Frontend Skill

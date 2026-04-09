@@ -1,6 +1,36 @@
 ---
 name: "doc"
 description: "Use when the task involves reading, creating, or editing `.docx` documents, especially when formatting or layout fidelity matters; prefer `python-docx` plus the bundled `scripts/render_docx.py` for visual checks."
+metadata:
+  id: doc
+  source_group: external
+  functional_area: content
+  tags:
+    - docx
+    - word
+    - formatting
+    - layout
+    - rendering
+  best_for:
+    - .docx editing
+    - layout-preserving document changes
+    - rendering validation
+  avoid_for:
+    - plain text editing
+    - markdown-only work
+  requires_tools:
+    - python3
+    - python-docx
+  optional_tools:
+    - soffice
+    - pdftoppm
+    - pdf2image
+  requires_network: false
+  requires_auth: none
+  outputs:
+    - updated docx document
+    - rendering checks
+    - layout-fidelity notes
 ---
 
 

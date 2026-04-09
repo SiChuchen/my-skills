@@ -1,6 +1,35 @@
 ---
 name: "imagegen"
 description: "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas."
+metadata:
+  id: imagegen
+  source_group: external
+  functional_area: content
+  tags:
+    - images
+    - raster
+    - generation
+    - editing
+    - mockups
+  best_for:
+    - bitmap image generation
+    - image transformation
+    - illustration or mockup creation
+  avoid_for:
+    - svg editing
+    - code-native graphics
+    - html-css-canvas rendering tasks
+  requires_tools:
+    - image_gen
+  optional_tools:
+    - python3
+    - OPENAI_API_KEY
+  requires_network: task-dependent
+  requires_auth: OPENAI_API_KEY-if-cli-fallback
+  outputs:
+    - raster image asset
+    - edited image variant
+    - previewable visual output
 ---
 
 # Image Generation Skill
