@@ -1,8 +1,23 @@
 # Automation
 
-这一组外部 skills 主要解决自动化执行和诊断类问题。
+## AI Summary
 
-## Skills
+- source_group: `external`
+- area: `automation`
+- choose_this_area_when: the task needs a tool to execute flows instead of only reasoning about them
 
-- `gh-fix-ci`: 用来检查 GitHub PR 或 Actions 失败原因，适合排查 CI 检查、读取日志、定位失败步骤。
-- `playwright`: 用来做浏览器自动化，适合页面访问、表单操作、截图、流程验证和 UI 调试。
+## Skill Index
+
+### `gh-fix-ci`
+
+- path: `skills/external/automation/gh-fix-ci`
+- use_when: 需要检查 GitHub PR checks、GitHub Actions、失败日志和失败步骤
+- avoid_when: CI 不在 GitHub，或者任务只需要本地修代码不需要查线上执行结果
+- ready: yes
+
+### `playwright`
+
+- path: `skills/external/automation/playwright`
+- use_when: 需要真实浏览器操作、页面验证、截图、表单填写、UI 流程调试
+- avoid_when: 不需要浏览器交互，或者任务是纯后端/纯文本
+- ready: yes

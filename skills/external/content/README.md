@@ -1,8 +1,23 @@
 # Content
 
-这一组外部 skills 主要处理文档和图片类内容。
+## AI Summary
 
-## Skills
+- source_group: `external`
+- area: `content`
+- choose_this_area_when: the task is about document fidelity or bitmap image generation/editing
 
-- `doc`: 用来处理 `.docx` 文档，适合版式保真、内容调整、格式校验和渲染检查。
-- `imagegen`: 用来生成或编辑位图图片，适合插图、素材图、透明背景图和视觉草图。
+## Skill Index
+
+### `doc`
+
+- path: `skills/external/content/doc`
+- use_when: 需要处理 `.docx`、版式、内容替换、格式保真、渲染校验
+- avoid_when: 文档只是普通文本或 Markdown，不涉及 Word 格式
+- ready: yes
+
+### `imagegen`
+
+- path: `skills/external/content/imagegen`
+- use_when: 需要生成或编辑位图图片、插图、贴图、透明背景图、视觉草稿
+- avoid_when: 更适合直接修改 SVG、HTML/CSS、Canvas 或代码生成图形
+- ready: yes

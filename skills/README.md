@@ -1,16 +1,16 @@
 # Skills
 
-这里是整个 skills 库的主体目录。
+## AI Summary
 
-## 分类方式
+- directory_type: top-level skill catalog
+- contains:
+  - `custom/`: self-maintained skills
+  - `external/`: imported or collected skills
+- usable_skill_rule: only a leaf directory with `SKILL.md` is directly usable
+- category_rule: this directory and its intermediate subdirectories are for routing only
 
-- `custom/`: 我自己定义和维护的 skills
-- `external/`: 从外部来源整理收录的 skills
+## Routing Hint
 
-进入这两个目录后，还会继续按主要用途分类。
-
-注意：
-
-- 中间层目录是分类目录
-- 只有最末级目录才是具体 skill
-- 真正需要复用时，请复制具体 skill 目录，而不是整层分类目录
+- Choose `custom/` when you want repository-owned skills that are easier to tune
+- Choose `external/` when the needed capability already exists in imported skills
+- After choosing the source group, continue by functional area

@@ -1,8 +1,23 @@
 # Development
 
-这一组外部 skills 主要服务于开发实现本身。
+## AI Summary
 
-## Skills
+- source_group: `external`
+- area: `development`
+- choose_this_area_when: the task is still development-oriented, but more specialized than generic engineering work
 
-- `frontend-skill`: 用来做前端页面和交互实现，强调视觉风格、页面结构、动效和整体体验。
-- `security-best-practices`: 用来做安全最佳实践审查，适合 Web、服务端和常见语言栈的安全检查。
+## Skill Index
+
+### `frontend-skill`
+
+- path: `skills/external/development/frontend-skill`
+- use_when: 需要实现前端页面、布局、视觉风格、动效或界面体验
+- avoid_when: 任务不是界面开发，或者只是简单修一个无设计需求的小问题
+- ready: yes
+
+### `security-best-practices`
+
+- path: `skills/external/development/security-best-practices`
+- use_when: 需要安全评审、威胁点检查、secure-by-default 指导
+- avoid_when: 任务只是普通实现或一般代码 review，没有安全目标
+- ready: yes

@@ -1,7 +1,16 @@
 # Research
 
-这一组自定义 skills 主要面向技术调研和信息核验。
+## AI Summary
 
-## Skills
+- source_group: `custom`
+- area: `research`
+- choose_this_area_when: the task needs current external information instead of only local code context
 
-- `tech-researcher`: 用来查当前版本的官方文档、API 行为、标准变化和技术选型信息，优先使用一手资料。
+## Skill Index
+
+### `tech-researcher`
+
+- path: `skills/custom/research/tech-researcher`
+- use_when: 需要查询当前版本文档、API 行为、标准变化、技术选型资料
+- avoid_when: 问题可以直接从本地仓库或已有上下文回答
+- ready: yes

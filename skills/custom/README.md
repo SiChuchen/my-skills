@@ -1,10 +1,15 @@
 # Custom
 
-这里存放我自己定义、会长期维护和持续调整的 skills。
+## AI Summary
 
-## 当前分类
+- source_group: `custom`
+- meaning: maintained and tuned in this repository
+- choose_this_group_when: you want a self-owned skill or expect future customization
+- subareas:
+  - `engineering`
+  - `research`
 
-- `engineering/`: 代码阅读、实现、评审
-- `research/`: 技术调研与资料核验
+## Routing Hint
 
-这一层主要强调“来源是我自己维护”，下一层再强调“这些 skill 主要解决什么问题”。
+- Go to `engineering/` for code understanding, implementation, or review
+- Go to `research/` for external technical research and current-document lookup

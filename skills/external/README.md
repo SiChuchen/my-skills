@@ -1,12 +1,19 @@
 # External
 
-这里存放来自外部来源后整理进库的 skills。
+## AI Summary
 
-## 当前分类
+- source_group: `external`
+- meaning: imported or collected from outside this repository, then reorganized here
+- choose_this_group_when: the required capability already exists and does not need to start from a custom local skill
+- subareas:
+  - `automation`
+  - `content`
+  - `development`
+  - `platform`
 
-- `automation/`: 自动化执行和问题排查
-- `content/`: 文档与图像内容处理
-- `development/`: 前端实现与安全实践
-- `platform/`: 平台文档、skill/plugin 创建与安装
+## Routing Hint
 
-这一层主要强调“skill 不是我原创维护”，下一层再按主要用途拆分。
+- Go to `automation/` for browser execution and CI diagnostics
+- Go to `content/` for document or image work
+- Go to `development/` for frontend or security work
+- Go to `platform/` for OpenAI docs, skill creation, plugin creation, or skill installation
